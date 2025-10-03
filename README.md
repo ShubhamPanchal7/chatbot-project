@@ -15,18 +15,16 @@ If you are developing a production application, we recommend using TypeScript wi
 # Chatbot-project
 A simple chatbot web application built with React and Vite. Supports interactive commands like dice roll, coin flip, and date queries.
 
-## Screenshots
 
-### Chatbot Conversation
-![Output Screenshot](screenshots/chatbot-conversation.png)
+📸 Screenshots
+Here are the screenshots for the chatbot project (click to view):
+<br>
+<a href="screenshots/chatbot-conversation.png" target="_blank" rel="noopener">Conversation Flow</a>
+<br>
+<a href="screenshots/chatbot-empty-chatbox-bottom.png" target="_blank" rel="noopener">Empty Chatbox (Input at Bottom)</a>
+<br>
+<a href="screenshots/chatbot-empty-chatbox-top.png" target="_blank" rel="noopener">Empty Chatbox (Input at Top)</a>
+<br>
+<a href="screenshots/chatbot-demo-commands.png" target="_blank" rel="noopener">Chatbot Demo Commands</a>
 
-### Chatbot Empty Chatbox
-![Output Screenshot](screenshots/chatbot-empty-chatbox-top.png)
-![Output Screenshot](screenshots/chatbot-empty-chatbox-bottom.png)
-
-### Chatbot Conversation
-![Output Screenshot](screenshots/chatbot-conversation.png)
-
-### Chatbot Demo Commands
-![Output Screenshot](screenshots/chatbot-demo-commands.png)
 >>>>>>> 68eb607f8b7a7f0892e746dadeb2e51107d08a58
