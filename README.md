@@ -140,24 +140,47 @@ npm run dev
 
 ---
 
-# 🎯 Supported Commands
+---
 
-| Command      | Description                  |
-| ------------ | ---------------------------- |
-| 🎲 Roll Dice | Generates random dice number |
-| 🪙 Flip Coin | Simulates coin toss          |
-| 📅 Date      | Displays current date        |
-| 👋 Greetings | Basic chatbot interaction    |
+## 🧪 Run Tests
+
+```bash
+npm test
+```
 
 ---
 
-# 📈 Future Improvements
+# 🎯 Supported Capabilities (100 Common Questions & Commands)
 
-* 🤖 AI-powered responses
-* 🌙 Dark mode support
-* 🎤 Voice command integration
-* 💾 Chat history storage
-* 🔗 Backend & database integration
+The chatbot now features a modular intent recognition engine supporting 100 common questions across 10 categories, each recognized with multiple natural language variations:
+
+| Category | Description & Examples |
+| -------- | ---------------------- |
+| **👋 A. Greetings & Conversation** | Hello, Hi, Hey, Good morning, How are you, What is your name, Who are you, What can you do |
+| **📅 B. Date & Time** | Current time, today's date, day of week, current month/year, tomorrow/yesterday, days left in year, timestamp |
+| **🎲 C. Random & Fun** | Flip/toss coin, roll one/two dice, random numbers, custom ranges, jokes, funny quotes, fun facts, decision picker |
+| **🧮 D. Mathematics & Calculations** | Dynamic arithmetic (+, -, ×, ÷), squares, cubes, square roots, percentages, modulos, unit conversions (no eval) |
+| **⚡ E. Productivity & Assistant** | Drink water reminder, in-app countdown timers (1 min, 5 min), Google/YouTube/Gmail links, web search, productivity/focus tips |
+| **💻 F. Computer & Web Knowledge** | Computer, Internet, Browser, HTML, CSS, JavaScript, React, API, Database, Artificial Intelligence |
+| **👨‍💻 G. Programming & Developer** | Variables, Functions, Loops, Arrays, JS Objects, Conditionals, Bugs, Debugging, Git, GitHub |
+| **🌍 H. General Knowledge** | Capitals (India, France), days/months counts, planets count, Red Planet, largest ocean, cheetah speed, hexagon sides, water formula |
+| **🌿 I. Lifestyle & Everyday** | Motivational quotes, study tips, concentration strategies, healthy habits, morning/bedtime routines, 7-min workouts, hobbies |
+| **⚙️ J. Chatbot Controls & Voice** | Clear chat, reset conversation, repeat response, text-to-speech reading, stop speech, voice mode toggle, help menu |
+
+---
+
+# 🏗️ Architecture
+
+```
+User Input ──▶ Normalization ──▶ Multi-Tier Intent Matcher ──▶ Parameter Extraction ──▶ Command Handler ──▶ Response & Actions
+```
+
+* `src/chatbot/intentMatcher.js` — Normalization (contractions, whitespace, punctuation) and multi-tier pattern/similarity matching.
+* `src/chatbot/intents.js` — Definitions of all 100 intents with 5–10+ natural language variations each.
+* `src/chatbot/mathParser.js` — Safe arithmetic, percentage, exponent, and unit parser without `eval()`.
+* `src/chatbot/responses.js` — Predefined knowledge bases, jokes, quotes, and advice datasets.
+* `src/chatbot/commandHandlers.js` — Dynamic execution for time/date, random logic, assistance tools, and help generation.
+* `src/chatbot/chatbotEngine.js` — Central coordinator and backwards-compatible Chatbot API.
 
 ---
 
